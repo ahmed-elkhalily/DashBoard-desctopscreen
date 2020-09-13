@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./style.css">
+    <title>DashBoard</title>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- DashBoard -->
+    <div class="flex h-screen w-screen">
+        <!-- Left Navbar Section  -->
+        <div class="flex-shrink-0 bg-gray-100 w-64 border-r border-gray-200 " id="l">
+            <img  class="mx-4 m4-6 w-24 h-24" src="./logo.webp" alt="logo">
+            <div class="mt-1 mx-3">
+                <span class="ml-2 uppercase text-gray-600 text-xs font-semibold">
+                    Issues
+                </span>
+                <!-- Issues Container -->
+                <div class="mt-2">
+                    <ul>
+                        <li class="px-2 py-2 flex justify-between bg-gray-300 text-gray-900 text-sm rounded-md">
+                            <span class="block font-semibold tracking-wider">
+                                All
+                            </span>
+                            <span class="block font-semibold tracking-wider">
+                                35
+                            </span>
+                        </li>
+                        <li class="mt-1 px-2 py-2 flex justify-between text-gray-800 text-sm rounded-md">
+                            <span class="block font-semibold tracking-wider">
+                                Assigned to me
+                            </span>
+                            <span class="block font-semibold tracking-wider">
+                                2
+                            </span>
+                        </li>
+                        <li class="mt-1 px-2 py-2 flex justify-between text-gray-800 text-sm rounded-md">
+                            <span class="block font-semibold tracking-wider">
+                                Created by me
+                            </span>
+                            <span class="block font-semibold tracking-wider">
+                                1
+                            </span>
+                        </li>
+                        <li class="mt-1 px-2 py-2 flex justify-between text-gray-800 text-sm rounded-mt-2 md">
+                            <span class="block font-semibold tracking-wider">
+                                Achived
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-2 mx-3">
+                <span class="ml-2 uppercase text-gray-600 text-xs font-semibold">
+                    Tags
+                </span>
+                <!-- Issues Container -->
+                <div class="mt-2">
+                    <ul>
+                        <li class="mt-1 px-2 py-2 text-gray-800 font-semibold text-sm rounded-md">
+                                Bug
+                        </li>
+                        <li class="mt-1 px-2 py-2 text-gray-800 font-semibold text-sm rounded-md">
+                            Feature Request
+                        </li>
+                        <li class="mt-1 px-2 py-2 text-gray-800 font-semibold text-sm rounded-md">
+                            Markting
+                        </li>
+                        <li class="mt-1 px-2 py-2 text-gray-800 font-semibold text-sm rounded-md">
+                            v2.0
+                        </li>
+                        <li class="mt-1 px-2 py-2 text-gray-800 font-semibold text-sm rounded-md">
+                            Enhancement
+                        </li>
+                        <li class="mt-1 px-2 py-2 text-gray-800 font-semibold text-sm rounded-md">
+                            Design
+                        </li>
+                        <li class="flex align-baseline my-2 px-2 py-2 text-gray-600 font-semibold text-sm rounded-md">
+                            <svg class="w-6 h-6 fill-current text-gray-600" xmlns="http://www.w3.org/2000/svg"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                            <span class="block ml-2">
+                                New Project
+                            </span>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--End Issues Container -->
+            </div>
+            <div class="bg-white flex flex-col" id="r">
+                <div class="mx-4 py-2 flex justify-between items-center border-b border-gray-300">
+                    <div class="relative">
+                        <input class="py-1 pl-8 w-64 border border-gray-500 placeholder-gray-900 text-gray-700 text-sm font-semibold rounded-md" placeholder="Search" type="search" name="" id="">
+                        <div class="absolute ml-2 left-0 top-0 h-full flex items-center">
+                                <svg class="w-6 h-6 fill-current text-gray-700" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.965 14.255h.79l4.99 5-1.49 1.49-5-4.99v-.79l-.27-.28a6.471 6.471 0 01-4.23 1.57 6.5 6.5 0 116.5-6.5c0 1.61-.59 3.09-1.57 4.23l.28.27zm-9.71-4.5c0 2.49 2.01 4.5 4.5 4.5s4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5-4.5 2.01-4.5 4.5z"/></svg>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="fill-current w-6 h-6 text-gray-800" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 15.75v-5c0-3.07-1.63-5.64-4.5-6.32v-.68c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.11 6 7.67 6 10.75v5l-2 2v1h16v-1l-2-2zm-6 6c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm-4-5h8v-6c0-2.48-1.51-4.5-4-4.5s-4 2.02-4 4.5v6z"/>
+                        </svg>
+                        <img class="h-10 w-10 ml-6 rounded-full" src="./person5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="px-4 py-2 flex items-center justify-between border-b border-gray-300">
+                    <div class="flex flex-1 items-center">
+                        <div class="mr-4">
+                            <h3 class="font-bold tracking-wider text-md">All Issues</h3>
+                        </div>
+                        <div class="flex felx-1 ml-2">
+                            <div class="-ml-2">
+                                <img src="./person2.jpg" alt="Avatar" class="w-8 h-8 border border-gray-100 rounded-full">
+                            </div>
+                            <div class="-ml-2">
+                                <img src="./person3.jpg" alt="Avatar" class="w-8 h-8 border border-gray-100 rounded-full">
+                            </div>
+                            <div class="-ml-2">
+                                <img src="./person4.jpg" alt="Avatar" class="w-8 h-8 border border-gray-100 rounded-full">
+                            </div>
+                            <div class="-ml-2">
+                                <img src="./person1.webp" alt="Avatar" class="w-8 h-8 border border-gray-100 rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="mr-4 flex items-center bg-gray-300 py-1 px-1 rounded-md">
+                            <button class="px-1 py-1 rounded-md">
+                                <svg class="w-6 h-6 fill-current text-gray-800">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 7V5h16v2H4zm0 4h16V9H4v2zm16 4H4v-2h16v2zm0 4H4v-2h16v2z"/>
+                                </svg>
+                            </button>
+                            <button class="ml-1 bg-gray-100 px-1 py-1 rounded-md shadow-md">
+                                <svg class="w-6 h-6 fill-current text-gray-800">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17 19.5H7v-15h10v15zM6 6.5H2v11h4v-11zm3 0h6v11H9v-11zm13 0h-4v11h4v-11z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="flex items-center bg-gray-800 text-white px-2 py-2 rounded-md text-sm  font-normal tracking-wider">
+                                <svg class="w-6 h-6 fill-current text-white mr-2" xmlns="http://www.w3.org/2000/svg"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                                New Issue
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 py-4 flex flex-1 overflow-x-auto">
+                        <!-- Start Tab -->
+                        <div class="bg-gray-300 rounded-md p-2 h-screen flex-shrink-0  mr-2" style="width:22rem;">
+                            <h3 class="text-gray-900 font-semibold tracking-wider text-xs my-3">Backlogs</h3>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Add Discount code to checkout page</h4>
+                                    <img src="./person2.jpg" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 14</p>
+                                    <div class="flex items-center bg-green-200 text-green-800 px-3 py-1 rounded-full">
+                                        <svg class="w-6 h-6 fill-current text-green-900" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span class="ml-1 text-sm">Feature Request</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Provide documentation on integrations</h4>
+                                    <img src="./person3.jpg" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 15</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Design shopping cart dropdown</h4>
+                                    <img src="./person4.jpg" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 14</p>
+                                    <div class="flex items-center bg-purple-200 text-purple-800 px-3 py-1 rounded-full">
+                                        <svg class="w-6 h-6 fill-current text-purple-900" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span class="ml-1 text-sm">Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Add discount code to checkout page</h4>
+                                    <img src="./person1.webp" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 14</p>
+                                    <div class="flex">
+                                        <svg class="w-8 h-8 fill-current text-gray-700 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM9 9H7v2h2V9zm6 0h2v2h-2V9zm-2 0h-2v2h2V9z"/>
+                                        </svg>
+                                        <div class="flex items-center bg-green-200 text-green-800 px-3 py-1 rounded-full">
+                                            <svg class="w-6 h-6 fill-current text-green-900" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                            </svg>
+                                            <span class="ml-1 text-sm">Feature Request</span>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-300 rounded-md p-2 h-screen flex-shrink-0 mr-2" style="width:22rem;">
+                            <h3 class="text-gray-900 font-semibold tracking-wider text-xs my-3">In Progress</h3>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Provide documentation on integerations</h4>
+                                    <img src="./person4.jpg" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 14</p>
+                                    <div class="flex items-center bg-red-200 text-red-800 px-3 py-1 rounded-full">
+                                        <svg class="w-6 h-6 fill-current text-red-900" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span class="ml-1 text-sm">Enhancement</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Designing dropdown card dropdown</h4>
+                                    <img src="./person2.jpg" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 15</p>
+                                    <div class="flex items-center bg-purple-200 text-purple-800 px-3 py-1 rounded-full">
+                                        <svg class="w-6 h-6 fill-current text-purple-900" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span class="ml-1 text-sm">Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Add discount code to checkout page</h4>
+                                    <img src="./person1.webp" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 14</p>
+                                    <div class="flex items-center px-3 py-1 rounded-full">
+                                        <svg class="w-8 h-8 fill-current text-gray-700" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM9 9H7v2h2V9zm6 0h2v2h-2V9zm-2 0h-2v2h2V9z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-300 rounded-md p-2 h-screen flex-shrink-0 mr-2" style="width:22rem;">
+                            <h3 class="text-gray-900 font-semibold tracking-wider text-xs my-3">In Progress</h3>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Provide documentation on integerations</h4>
+                                    <img src="./person4.jpg" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 14</p>
+                                    <div class="flex items-center bg-red-200 text-red-800 px-3 py-1 rounded-full">
+                                        <svg class="w-6 h-6 fill-current text-red-900" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span class="ml-1 text-sm">Enhancement</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Designing dropdown card dropdown</h4>
+                                    <img src="./person2.jpg" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 15</p>
+                                    <div class="flex items-center bg-purple-200 text-purple-800 px-3 py-1 rounded-full">
+                                        <svg class="w-6 h-6 fill-current text-purple-900" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span class="ml-1 text-sm">Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Add discount code to checkout page</h4>
+                                    <img src="./person1.webp" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 14</p>
+                                    <div class="flex items-center px-3 py-1 rounded-full">
+                                        <svg class="w-8 h-8 fill-current text-gray-700" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM9 9H7v2h2V9zm6 0h2v2h-2V9zm-2 0h-2v2h2V9z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-300 rounded-md p-2 h-screen flex-shrink-0 mr-2" style="width:22rem;">
+                            <h3 class="text-gray-900 font-semibold tracking-wider text-xs my-3">In Action</h3>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Provide documentation on integerations</h4>
+                                    <img src="./person4.jpg" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 14</p>
+                                    <div class="flex items-center bg-red-200 text-red-800 px-3 py-1 rounded-full">
+                                        <svg class="w-6 h-6 fill-current text-red-900" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span class="ml-1 text-sm">Enhancement</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Designing dropdown card dropdown</h4>
+                                    <img src="./person2.jpg" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 15</p>
+                                    <div class="flex items-center bg-purple-200 text-purple-800 px-3 py-1 rounded-full">
+                                        <svg class="w-6 h-6 fill-current text-purple-900" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span class="ml-1 text-sm">Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-md p-4 mb-2 shadow-md">
+                                <div class="flex align-center items-center justify-between ">
+                                    <h4 class="mr-6">Add discount code to checkout page</h4>
+                                    <img src="./person1.webp" alt="Avatar" class="w-8 h-8 ml-5 border rounded-full">
+                                </div>
+                                <div class="flex align-center items-center justify-between mt-4">
+                                    <p class="font-medium text-sm text-gray-600">Sep 14</p>
+                                    <div class="flex items-center px-3 py-1 rounded-full">
+                                        <svg class="w-8 h-8 fill-current text-gray-700" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM9 9H7v2h2V9zm6 0h2v2h-2V9zm-2 0h-2v2h2V9z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Tab -->
+                </div>
+            </div>
+        </div>
+        <!-- Right Section  -->
+        <script>
+                r.style.width = (window.innerWidth - l.offsetWidth) + "px" 
+        </script>
+</body>
+</html>
